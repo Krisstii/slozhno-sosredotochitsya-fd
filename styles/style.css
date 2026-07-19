@@ -199,6 +199,10 @@
   gap: 20px;
 }
 
+.title_answer {
+  margin-bottom: 20px;
+}
+
 .main-section-picture {
   display: grid;
   gap: var(--padding-page);
@@ -306,10 +310,6 @@
     grid-column: 2/4;
   }
 
-  .title_answer {
-    margin-bottom: 20px;
-  }
-
   .picture-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -361,7 +361,7 @@
   .header {
     min-height: 768px;
     margin-block-end: 0;
-    padding: 20px;
+    padding: 0 20px;
   }
 
   .header__theme-menu {
