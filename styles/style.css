@@ -51,20 +51,27 @@
   color: var(--accent-color);
   font-size: var(--font-size);
   position: absolute;
-  right: 28px;
+  top: var(--padding-page);
+  right: 38px;
 }
 
 .decorated-dark-theme::after {
   content: "";
-  display: inline-block;
   position: absolute;
   height: 9px;
   width: 9px;
   border-radius: 50%;
-  right: -20px;
-  top: 8px;
+  top: 9px;
   background-color: var(--accent-color);
   box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.decorated-dark-theme::before {
+  content: "REC";
+  font-weight: normal;
+  color: var(--accent-color);
+  padding-top: clamp(10px, 0.46px + 2.54vw, 20px);
+  margin-right: 10px;
 }
 
 .header__theme-menu {
@@ -276,6 +283,7 @@
 
   .main-section:nth-child(2n + 1) .section-title {
     grid-column: 1;
+    width: clamp(236px, -1px + 30.859vw, 315px);
   }
 
   .main-section:nth-child(2n + 1) .card-list {
@@ -287,6 +295,19 @@
   .main-section:nth-child(2n) .section-title {
     text-align: left;
     width: clamp(200px, -71.43px + 35.71vw, 315px);
+  }
+
+  .section-title + .card-title {
+    display: grid;
+    grid-column: 2/4;
+  }
+
+  .card-list-wrapper {
+    grid-column: 2/4;
+  }
+
+  .title_answer {
+    margin-bottom: 20px;
   }
 
   .picture-list {

@@ -17,3 +17,22 @@
   --title-decor: #000028;
   --focus-color: #db00ff;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-image: url("/images/cover-image-dark.png");
+    --accent-color: #ff0070;
+    --bg-color: #000028;
+    --card-text-color: #f1b2ce;
+    --menu-section-title: #ff0070;
+    --title-decor: #000028;
+    --focus-color: #db00ff;
+  }
+  .decorated-theme-dark::before {
+    display: inline-block;
+  }
+
+  .decorated-theme-dark::after {
+    display: inline-block;
+  }
+}

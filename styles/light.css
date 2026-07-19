@@ -34,6 +34,10 @@
   background-image: var(--bg-image);
 }
 
-.decorated-dark-theme {
+.theme-light .decorated-dark-theme::before {
+  display: none;
+}
+
+.theme-light .decorated-dark-theme::after {
   display: none;
 }
