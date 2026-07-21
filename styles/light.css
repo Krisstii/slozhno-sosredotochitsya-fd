@@ -20,7 +20,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-image: url("/images/cover-image-light.png");
+    --bg-image: url("../images/cover-image-light.png");
     --accent-color: #ff8dcb;
     --bg-color: #fff1f7;
     --card-text-color: #353430;
@@ -28,10 +28,6 @@
     --title-decor: #353430;
     --menu-section-title: var(--title-decor, #353430);
   }
-}
-
-.page {
-  background-image: var(--bg-image);
 }
 
 .theme-light .decorated-dark-theme::before {
