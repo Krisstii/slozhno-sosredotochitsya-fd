@@ -4,11 +4,12 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-color: var(--bg-color);
   font-family: var(--font-family);
+  background-attachment: fixed
 }
 
 .header {
   height: 100%;
-  min-height: 668px;
+  min-height: clamp(668px, 90.59vh + 328.31px, 1024px);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto 1fr;
@@ -45,6 +46,7 @@
 }
 
 .decorated-dark-theme {
+  display: var(--decorated-display);
   line-height: 25px;
   font-weight: normal;
   color: var(--accent-color);
@@ -250,7 +252,7 @@
 @media (width >= 768px) {
   .header {
     grid-template-columns: 1fr 1fr;
-    min-height: 1024px;
+    /* min-height: 1024px; */
     padding: 20px;
   }
 

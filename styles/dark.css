@@ -16,12 +16,13 @@
   --menu-section-title: #ff0070;
   --title-decor: #000028;
   --focus-color: #db00ff;
+  --decorated-display: inline-block;
 }
 
-.decorated-theme-dark::before {
+/* .decorated-theme-dark::before {
   display: inline-block;
 }
 
 .decorated-theme-dark::after {
   display: inline-block;
-}
+} */
