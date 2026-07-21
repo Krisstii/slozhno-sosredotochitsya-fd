@@ -18,11 +18,3 @@
   --focus-color: #db00ff;
   --decorated-display: inline-block;
 }
-
-/* .decorated-theme-dark::before {
-  display: inline-block;
-}
-
-.decorated-theme-dark::after {
-  display: inline-block;
-} */
