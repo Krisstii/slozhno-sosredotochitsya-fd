@@ -250,6 +250,7 @@
 @media (width >= 768px) {
   .header {
     grid-template-columns: 1fr 1fr;
+    min-height: 1024px;
     padding: 20px;
   }
 
@@ -374,10 +375,6 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
-  .main-section_type_right {
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: start;
-  }
 
   .main-section_type_right .card-list {
     grid-template-columns: repeat(3, 1fr);
