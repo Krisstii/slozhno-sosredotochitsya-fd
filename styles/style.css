@@ -2,9 +2,12 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  background-color: var(--bg-color);
   font-family: var(--font-family);
   background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: var(--bg-image);
 }
 
 .header {
@@ -14,9 +17,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto 1fr;
   padding: var(--padding-page);
-  background-image: var(--bg-image);
-  background-position: center;
-  background-size: cover;
 }
 
 .decorated-zone {
@@ -81,31 +81,6 @@
   align-self: center;
 }
 
-.header__theme-menu-button_active {
-  pointer-events: none;
-  border: 1px solid var(--menu-section-title);
-}
-
-.header__theme-menu-button:hover:not(.header__theme-menu-button_active) {
-  border: 1px solid var(--menu-section-title);
-}
-
-.header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--menu-section-title);
-  border: none;
-  outline: none;
-}
-
-.header__theme-menu-button:focus {
-  outline: none;
-}
-
-.header__theme-menu-list {
-  display: grid;
-  justify-self: end;
-  gap: 10px;
-}
-
 .header__theme-menu-button {
   text-transform: lowercase;
   background-color: transparent;
@@ -118,6 +93,29 @@
   font-weight: normal;
   line-height: 18px;
   color: var(--menu-section-title);
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--menu-section-title);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button-hover);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--menu-section-title);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  justify-self: end;
+  gap: 10px;
 }
 
 .title-focus {
@@ -185,7 +183,6 @@
 }
 
 .link:focus {
-  border: none;
   outline: none;
 }
 
@@ -194,6 +191,7 @@
   gap: clamp(50px, calc(50px + 30 * (100vw - 375px) / 393), 80px);
   padding: clamp(40px, 40px + (60 - 40) * (100vw - 375px) / (768 - 375), 60px)
     var(--padding-page);
+  background-color: var(--bg-color);
 }
 
 .main-section {
@@ -281,21 +279,21 @@
     padding: 60px 20px clamp(60px, 1.05vw + 51.95px, 79px) 20px;
   }
 
-  .main-section_type_left {
+  .main-section_type_basic {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: start;
   }
 
-  .main-section_type_left .section-title {
+  .main-section_type_basic .section-title {
     grid-column: 1;
     width: clamp(236px, -1px + 30.859vw, 315px);
   }
 
-  .main-section_type_left .card-list {
+  .main-section_type_basic .card-list {
     grid-column: 2 / 4;
   }
 
-  .main-section_type_right .section-title {
+  .main-section_type_alternative .section-title {
     text-align: left;
     width: clamp(200px, -71.43px + 35.71vw, 315px);
   }
@@ -375,7 +373,7 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
-  .main-section_type_right .card-list {
+  .main-section_type_alternative .card-list {
     grid-template-columns: repeat(3, 1fr);
   }
 
